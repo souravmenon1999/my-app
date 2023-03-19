@@ -30,6 +30,14 @@ const Main = ({ activeNote, onUpdateNote }) => {
     }));
   }
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      actionSubmit(event);
+    }
+  };
+
   const actionSubmit = (event) => {
     event.preventDefault(); // prevent default form submission behavior
     
@@ -51,15 +59,20 @@ const Main = ({ activeNote, onUpdateNote }) => {
     <div className="app-main">
 
 <div className="app-main-note-preview">
+    <div className="app-main-note-preview-title">
 
-<input
-          type="text"
-          id="title"
-          placeholder="Note Title"
-          value={activeNote.title}
-          onChange={(e) => onEditField("title", e.target.value)}
-          autoFocus
-        />
+
+    <div style={{backgroundColor:activeNote.color}} className="profilePicture">
+      {activeNote.shortForm}
+    
+    </div>
+
+    <div className="para"> {activeNote.title}</div>
+    
+
+        
+    </div>
+
 
   <div className="app-main-note-preview-left">
     <table>
@@ -96,7 +109,7 @@ const Main = ({ activeNote, onUpdateNote }) => {
         <form  onSubmit={actionSubmit}>
 
         <div className="app-main-textarea" s>
-        <button type="submit" class="app-main-textarea-submit-button">
+        <button type="submit" class="app-main-textarea-submit-button"  >
     <svg width="35" height="29" viewBox="0 0 35 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 29V18.125L14.5 14.5L0 10.875V0L34.4375 14.5L0 29Z" fill="#ABABAB"/>
     </svg>
@@ -106,6 +119,8 @@ const Main = ({ activeNote, onUpdateNote }) => {
             placeholder="Write your note here..."
             value={subNote.msg}
             onChange={actionChange}
+
+            onKeyDown={handleKeyDown}
           />
           
           </div>

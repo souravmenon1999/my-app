@@ -198,11 +198,12 @@ textarea {
 
 
 .popUp{
-  height: auto;
-  width: auto;
   
-  margin-top: 10%;
+  width: 600px;
+  
+  margin-top: 15%;
   margin-left: 30%;
+  padding-left: 2%;
   border-width: 1000px;
   position: absolute;
   
@@ -211,10 +212,9 @@ textarea {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 
   background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  opacity: 0.8;
   
-  text-align: center;
+  
+  text-align: left;
   
   
 }
@@ -285,4 +285,47 @@ position: relative;
   height: 100%;
   background-color: rgba(0, 0, 0, 0); /* Change the opacity value here */
   z-index: 9999;
+}
+
+.app-main-note-preview-title{
+  padding-left: 20px;
+  padding-top: 10px;
+  height: 98px;
+  width: 100%;
+  background-color: #E8E8E8;
+  display: flex;
+  display: flex;
+  align-items: center; /* vertically center the flex items */
+  justify-content: left; 
+  
+}
+
+.profilePicture{
+
+  width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: medium;
+    padding-top: 2%;
+    
+    text-align: center;
+    
+    text-align:  absolute;
+    
+    color:white;
+
+}
+
+.para{
+  
+  padding-left: 20px;
+  font-weight: 20px;
+  padding-bottom: 10px;
+  font-style: Medium;
+  font-size: 35px;
+  
+  letter-spacing: 2%;
+  
+  
+  
 }

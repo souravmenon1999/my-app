@@ -169,25 +169,47 @@ const Sidebar = ({
         <button onClick={() => setIsOpen(true)}>+  Create Notes</button>
         <div className='popUp'>
         <Modal className="nothing" isOpen ={isOpe} onRequestClose={() => setIsOpen(false)} className='popUp'>
-  <h2>Create New Notes</h2>
+  <h2 style={{borderBottom:'10px'}}>Create New Notes</h2>
   <form onSubmit={handleSubmit}>
-    <label>
-      Group Name:
-      <input type="text" name='title' value={formData.title} onChange={handleChange} />
-    </label>
-    <div>
+    <div style={{
+  display:'flex',
+  flexDirection:'row',
+  fontSize: '20px',
+  fontWeight: 5000,
+  lineHeight: '44px',
+  letterSpacing: '0.035em',
+  textAlign: 'left',
+
+  display: "flex",
+    flexDirection: "row",
+    alignItems: "left",
+    marginBottom:'20px',
+    
+    
+    
+}}>
+     <p  style={{paddingRight:"20px"}}><strong> Group Name: </strong> </p>
+      <input type="text" style={{height:'51px',width:'300px', paddingLeft:'20px',marginLeft:'10px',marginTop:'25px',border: "2px solid rgba(204, 204, 204, 1)",borderRadius: "22px",
+}} name='title' value={formData.title} onChange={handleChange} placeholder="Enter your group name ..." />
+    </div>
+    <div style={{display:"flex", flexDirection:'row'}}>  
       
-      <p>Choose Color</p>
+    <p style={{paddingRight:'30PX', fontSize:"20px",fontSize: '20px',
+  fontWeight: 5000,
+  
+  letterSpacing: '0.035em',}}><strong> choose colour:</strong></p>
       {colorOptions.map((color) => (
         <div
+        
           key={color}
           name={color}
           value={formData.color}
           style={{
+            borderLeft:'30px',
             backgroundColor: color,
-            width: '50px',
-            height: '50px',
-            borderRadius:'50px',
+            width: '40px',
+            height: '40px',
+            borderRadius:'40px',
             display: 'inline-block',
             margin: '10px',
             cursor: 'pointer',
@@ -196,7 +218,21 @@ const Sidebar = ({
         />
       ))}
     </div>
-    <button type="submit">Create</button>
+    <button style={{
+      textAlign:"center",
+      backgroundColor: "black",
+      width:'154px',
+      height:'30px',
+  color: "white",
+  borderRadius: "10px",
+  paddingLeft: "10px",
+  paddingRight: "10px",
+  border: "none",
+  marginRight: "10px",
+  marginTop:'20px',
+  marginLeft:"400px",
+  marginBottom:'50px'
+    }} type="submit">Create</button>
   </form>
   
 </Modal>
@@ -224,7 +260,7 @@ const Sidebar = ({
               <strong>{title}</strong>
               </div>
               
-             <button onClick={(e) => onDeleteNote(id)}>Delete</button> 
+            {/* <button onClick={(e) => onDeleteNote(id)}>Delete</button> */}
             </div>
 
             

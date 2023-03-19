@@ -10,7 +10,7 @@ import Sidebar from "./sidebar/Sidebar";
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"></link>
 function App() {
   const [notes, setNotes] = useState(
-    localStorage.others ? JSON.parse(localStorage.notes) : []
+    localStorage.others ? JSON.parse(localStorage.others) : []
   );
   const [activeNote, setActiveNote] = useState(false);
 
