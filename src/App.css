@@ -1,0 +1,288 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+
+body,
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
+  overflow: hidden;
+  filter: blur(0);
+  transition: filter 0.2s ease-in-out;
+}
+
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: #08c;
+}
+button:hover {
+  color: #04c;
+}
+
+.App {
+  display: flex;
+}
+
+/* SIDEBAR STYLES */
+
+.app-sidebar {
+  width: 370px;
+  height: auto;
+  border-right: 1px solid #ddd;
+  
+}
+
+.app-sidebar-header {
+  
+  justify-content: space-between;
+  padding: 25px;
+}
+.app-sidebar-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.app-sidebar-header button {
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: medium;
+  height: auto;
+  width: auto;
+  border-radius: 50px;
+  
+  color: white;
+  background-color: black;
+  
+}
+
+.app-sidebar-notes {
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  padding-bottom: 4cm;
+  padding-left: 3%;
+}
+.app-sidebar-note {
+  
+  padding-left: 24px;
+  cursor: pointer;
+  height: 98px;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  margin-left: 0px;
+  font-size: medium;
+  
+  
+  
+  
+
+}
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-left;
+}
+.app-sidebar-note button {
+  color: crimson;
+}
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+.app-sidebar-note small {
+  display: block;
+  color: #999;
+}
+
+.app-sidebar-note:hover {
+  background:rgba(247, 236, 220, 1);
+  border-radius: 32px 0px 0px 32px;
+}
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background:rgba(247, 236, 220, 1);
+  color: black;
+  border-radius: 32px 0px 0px 32px;
+  
+}
+
+.app-sidebar-circle{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: medium;
+    padding-top: 3%;
+    
+    text-align: center;
+    
+    text-align:  ab;
+    
+    color:white;
+}
+
+/* NOTE EDITOR/PREVIEW (MAIN) STYLES */
+
+.app-main {
+  width: 80%;
+  height: 844px;
+  
+}
+.app-main-note-edit,
+.app-main-note-preview {
+  height: 510px;
+}
+
+.no-active-note {
+  width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
+}
+
+/* Editing */
+
+
+.app-main-note-edit input,
+textarea {
+  display: block;
+  border: 20px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  
+  background-clip: padding-box-left-bottom;
+  
+}
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
+}
+
+/* Preview */
+.app-main-note-preview {
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.02);
+  
+  
+}
+
+.preview-title {
+  padding: 25px 25px 0 25px;
+  margin: 0;
+}
+
+
+
+.popUp{
+  height: auto;
+  width: auto;
+  
+  margin-top: 10%;
+  margin-left: 30%;
+  border-width: 1000px;
+  position: absolute;
+  
+  position: fixed;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  opacity: 0.8;
+  
+  text-align: center;
+  
+  
+}
+
+ this example, the body element has a default blur(0) filter, and we use the .popup-open body selector to apply a blur(5px) filter to the body when the popup is open. The transition property is used to create a smooth animation between the two states.
+
+
+
+
+
+
+/* Apply a blur filter to the body element by default */
+.app-main-note-preview-left{
+
+  background-color: #F7ECDC;
+
+}
+
+.app-main-preview-left-wide{
+  
+  padding : 20px;
+  text-align: left;
+  border: 10px solid transparent;
+vertical-align:top ;
+letter-spacing: 3.5%;
+line-height: 29px;
+line-height: 160%;
+font-style: regular;
+font-size: 18px;
+font-family: Roboto, sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 29px;
+letter-spacing: 0.035em;
+text-align: left;
+position: relative;
+
+}
+
+.app-main-note-preview{
+  background-color:#F7ECDC ;
+}
+  
+
+
+  
+.app-main-textarea-submit-button {
+  width: 35px;
+  height: 29px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+   
+   position: absolute;
+   
+   top: 85%;
+   right: 2%;
+}
+   
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Change the opacity value here */
+  z-index: 9999;
+}
